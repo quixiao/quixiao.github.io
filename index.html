@@ -1,89 +1,141 @@
-<!DOCTYPE HTML>
-<!--
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!----
+
+# Navigation
+# By: Dreamer-Paul
+# Last Update: 2022.3.11
+
+一个简单的个人首页，让你的朋友方便快捷的，找到你在各站点的社交链接
+
+本代码为奇趣保罗原创，并遵守 MIT 开源协议。欢迎访问我的博客：https://paugram.com
+
+---->
+
+<!DOCTYPE html>
 <html>
-
 <head>
-	<title>猪猪boy丨个人主页</title>
-	<meta charset="utf-8" />
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<meta name='description' content='猪猪的个人主页'>
-	<meta name='keywords' content='猪猪,fancypig,blog,主页,简介,介绍'>
-	<meta name='robots' content='index,follow'>
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
+    <meta charset="UTF-8">
+    <title>你好，盛磊</title>
+    <link href="static/32.png" rel="icon" sizes="32x32"/>
+    <link href="static/192.png" rel="icon" sizes="192x192"/>
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
+    <style>
+        html, body, main{
+            height: 100%;
+        }
+
+        body{
+            margin: 0;
+            user-select: none;
+            font: lighter 16px "微软雅黑";
+        }
+        body:before{
+            content: '';
+            z-index: -1;
+            width: 3000px;
+            height: 3000px;
+            display: block;
+            position: fixed;
+            top: calc(50% - 1500px);
+            left: calc(50% - 1500px);
+            animation: bg-rotate 15s infinite linear;
+            background: linear-gradient(45deg, #20b57d 40%, #258ec5 60%);
+        }
+
+        @keyframes bg-rotate {
+            0%{ transform: rotate(0) }
+            100%{ transform: rotate(360deg) }
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        main{
+            display: table;
+            margin: 0 auto;
+        }
+
+        .content{
+            padding-top: 50px;
+            padding-bottom: 70px;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .logo{
+            margin-bottom: 50px;
+        }
+        .logo img{
+            height: auto;
+            max-width: 100px;
+            border-radius: 100%;
+            border: 3px solid #fff;
+            transition: transform 0.3s;
+        }
+        .logo img:hover{
+            transform: scale(1.1, 1.1) rotate(1turn);
+        }
+
+        .links{
+            max-width: 300px;
+        }
+        .links a{
+            color: #fff;
+            display: block;
+            min-width: 80px;
+            padding: 1em 2em;
+            text-align: center;
+            margin-bottom: 1em;
+            border-radius: 100px;
+            border: #fff 1px solid;
+            transition: background 0.3s, color 0.3s, opacity 0.3s, transform 0.3s;
+        }
+        .links a:hover{
+            color: #258ec5;
+            background: #fff;
+            transform: scale(1.1, 1.1);
+        }
+        .links a:active{
+            opacity: 0.7;
+            transform: scale(0.9, 0.9);
+        }
+        .links a:last-child{
+            margin-bottom: 0;
+        }
+
+        footer{
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: #fff;
+            position: fixed;
+            text-align: center;
+        }
+        footer a{
+            color: inherit;
+        }
+    </style>
 </head>
-
-<body class="is-preload">
-	<div id="wrapper">
-		<div id="bg"></div>
-		<div id="overlay"></div>
-		<div id="main">
-
-			<!-- Header -->
-			<header id="header">
-				<h1>FancyPig</h1>
-				<p>&nbsp;&bull;&nbsp; 这家伙很懒，什么也没留下 &nbsp;&bull;&nbsp;</p>
-				<nav>
-					<ul>
-						<li><a href="http://www.iculture.cc/" target="_blank" class="icon solid fa-blog" title="每天都是最好的自己。"><span
-									class="label">博客</span></a></li>
-						<li><a href="http://www.iculture.cc/forums" target="_blank" rel="noopener" class="icon regular fa-layer-group"
-								title="社区"><span class="label">社区</span></a></li>
-						<li><a href="http://acg-faka.iculture.cc/" target="_blank" rel="noopener" class="icon light fa-store"
-								title="猪猪小店。"><span class="label">小店</span></a></li>
-						<li><a href="https://www.iculture.cc/category/knowledge/chrome" target="_blank" rel="noopener"
-								class="icon brands fa-chrome" title="浏览器技巧"><span class="label">Chrome
-									浏览器技巧</span></a></li>
-						<li><a href="https://www.iculture.cc/category/software" target="_blank" rel="noopener" class="icon regular fa-server"
-								title="服务器探针"><span class="label">软件</span></a></li>
-						<li><a href="http://tools.iculture.cc" target="_blank" rel="noopener" class="icon brands fa-sellsy"
-								title="服务状态"><span class="label">工具</span></a></li>
-						<li><a href="#" target="_blank" rel="nofollow noopener"
-								class="icon brands fa-weibo" title="微博关注我"><span class="label">微博</span></a></li>
-						<li><a href="#" target="_blank" rel="nofollow noopener"
-								class="icon brands fa-instagram" title="关注我的 Instagram"><span
-									class="label">Instagram</span></a></li>
-						<li><a href="#" target="_blank" rel="nofollow noopener"
-								class="icon brands fa-telegram-plane" title="Telegram"><span
-									class="label">Telegram</span></a></li>
-						<li><a href="#" target="_blank" rel="nofollow noopener"
-								class="icon brands fa-github-alt" title="Fork me on Github"><span
-									class="label">Github</span></a></li>
-						<li><a href="#" target="_blank" rel="nofollow noopener"
-								class="icon brands fa-twitter" title="Twitter 关注我"><span
-									class="label">Twitter</span></a></li>
-						<li><a href="663962@qq.com" target="_blank" rel="nofollow noopener" class="fa fa-envelope"
-								title="给我发邮件"><span class="label">Email</span></a></li>
-					</ul>
-				</nav>
-			</header>
-
-			<!-- Footer -->
-			<footer id="footer">
-				<span class="copyright">&copy; 2022 <a href="http://www.iculture.cc/" target="_blank">FancyPig</a>丨<a
-						href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow">京ICP备17068217号-1</a></span>
-			</footer>
-
-		</div>
-	</div>
-	<script>
-		window.onload = function () { document.body.classList.remove('is-preload'); }
-		window.ontouchmove = function () { return false; }
-		window.onorientationchange = function () { document.body.scrollTop = 0; }
-	</script>
-
-	<script>
-		console.log("%c%c微信公众号%cFancyPig", "line-height:28px;", "line-height:28px;padding:4px;background:#2ccbe6;color:#FADFA3;font-size:14px;", "padding:4px 4px 4px 2px;background:#ff146d;color:green;line-height:28px;font-size:12px;");
-	</script>
-	<script disable-devtool-auto src='http://fastly.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'
-		disable-menu='false'></script>
+<body>
+<main class="container">
+    <div class="content">
+        <div class="logo">
+            <img src="static/avatar.jpg" alt="shenglei的个人首页" />
+        </div>
+        <div class="links">
+            <a href="https://paul.ren">主页</a>
+            <a href="https://paugram.com">博客</a>
+            <a href="http://weibo.com/234891753/" target="_blank">微博</a>
+            <a href="http://music.163.com/#/user/home?id=7041859" target="_blank">网易云</a>
+            <a href="http://steamcommunity.com/id/dreamer-paul/" target="_blank">Steam</a>
+            <a href="https://github.com/dreamer-paul/" target="_blank">GitHub</a>
+            <a href="https://space.bilibili.com/124512959/" target="_blank">哔哩哔哩</a>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>© <script>document.write(new Date().getFullYear())</script> By <a href="https://paugram.com" target="_blank">Dreamer-Paul</a>.</p>
+</footer>
 </body>
-
 </html>
